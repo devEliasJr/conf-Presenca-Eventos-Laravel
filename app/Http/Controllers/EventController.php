@@ -3,27 +3,20 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Event;
 
 class EventController extends Controller
 {
-    public function index() {
-        $nome = "Elias";
-        $idade = 26;
-        $arr = [12, 24, 34, 45, 58];
-        $arrnames = ['elias', 'ana', 'enzo'];
+    public function index()
+    {
+        // $events = Event::orderBy("created_at","desc")->paginate(10);
+        $events = Event::all();
 
-        return view(
-            'welcome',
-            [
-                'nome' => $nome,
-                'idade' => $idade,
-                'arr' => $arr,
-                'arrnames' => $arrnames
-            ]
-        );
+        return view('welcome', ['events' => $events]);
     }
 
-    public function create() {
+    public function create()
+    {
         return view('events.create');
     }
 }
