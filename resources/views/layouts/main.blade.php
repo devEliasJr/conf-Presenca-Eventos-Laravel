@@ -19,7 +19,9 @@ name="viewport" content="width=device-width, initial-scale=1">
             <div class="collapse navbar-collapse" id="navbar">
 
                 <a href="" class="navbar-brand"></a>
-                <img src="/img/hdcevents_logo.svg" alt="HDC Events">
+                <a href="/">
+                    <img src="/img/hdcevents_logo.svg" alt="HDC Events">
+                </a>
 
                 <ul class="navbar-nav">
                     <li class="nav-item">
