@@ -232,6 +232,15 @@ header {
     margin-top: 20px;
 }
 
+#info-container .already-joined-msg {
+    padding: 10px;
+    background-color: #0bc93775;
+    border: 1px solid #0bc937b2;
+    border-radius: 4px;
+    max-width: fit-content;
+    margin: 15px 0;
+}
+
 /* footer */
 footer {
     text-align: center;

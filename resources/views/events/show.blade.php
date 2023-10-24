@@ -15,6 +15,7 @@
                 <p class="events-participants"><ion-icon name="people-outline"></ion-icon> {{ $event->users->count() }}</p>
                 <p class="events-participants"><ion-icon name="calendar-outline"></ion-icon> {{date("d/m/Y", strtotime($event->date)) }}</p>
                 <p class="event-owner"><ion-icon name="star-outline"></ion-icon> {{ $eventOwner['name'] }}</p>
+                @if(!$hasUserJoined)
                 <form action="/events/join/{{ $event->id }}" method="POST">
                     @csrf
                     <a href="/events/join/{{ $event->id }}"
@@ -24,6 +25,10 @@
                     this.closest('form').submit()">
                     Confirmar Presença</a>
                 </form>
+                @else
+                <p class="already-joined-msg">Você está participando deste evento.</p>
+                @endif
+
                 <h3>O evento conta com:</h3>
                 <ul id="items-list">
                     @if($event->items)
