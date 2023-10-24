@@ -6,7 +6,6 @@
 /vendor
 .env
 .env.backup
-*.webp
 .env.production
 .phpunit.result.cache
 Homestead.json
@@ -17,3 +16,9 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+
+# extesions of images
+*.png
+*.jpg
+*.jpeg
+*.webp
